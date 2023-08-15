@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "poppins", sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e3edf7;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.skill{
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
+.skill_2{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    position: absolute;
+    right: 30%;
+}
+.skill_3{
+    width: 160px;
+    height: 160px;
+    position: relative;
+    position: absolute;
+    left: 30%;
+}
+h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-family: cursive;
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+.outer{
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+.inner{
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), 
+                inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), 
+                -0.5px -0.5px 0px rgba(255, 255, 255, 1), 
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number, .number_2, .number_3{
+    font-weight: 700;
+    color: #555;
+}
+
+.circle_1{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anim 2s linear forwards;
+}
+.circle_2{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anim_2 2s linear forwards;
+}
+.circle_3{
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: anim_3 2s linear forwards;
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 88;
+    }
+}
+@keyframes anim_2{
+    100%{
+        stroke-dashoffset: 220;
+    }
+}
+@keyframes anim_3{
+    100%{
+        stroke-dashoffset: 22;
+    }
+}
+
+
+/*    media screen  */
+
+
+@media screen and (max-width: 1220px){
+    body{
+        background-color: #e3edf7;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        position: relative;
+    }
+    .skill{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        margin-top: 40px;
+    }
+    .skill_2{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 80px;
+    }
+    .skill_3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+@media screen and (max-width: 400px){
+    .skill_3, .skill_2,.skill{
+        flex-direction: row;
+    }
+    h1{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 540px) and (max-height: 720px){
+    .skill_3, .skill_2,.skill{
+        flex-direction: row;
+    }
+    h1{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        margin-left: 10px;
+    }
+}
+@media screen and (max-width: 720px) and (max-height: 540px){
+    .skill_3, .skill_2, .skill{
+        flex-direction: row;
+    }
+    .skill{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 30%;
+        
+    }
+    .skill_2{
+        display: flex;
+        flex-direction: column;
+        
+        align-items: center;
+        position: absolute;
+        top: 23%;
+        transform: translate(100%);
+        
+    }
+    .skill_3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 38%;
+        transform: translate(-180%);
+    }
+    h1{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin: 0;
+        margin-left: 10px;
+    }
+}
